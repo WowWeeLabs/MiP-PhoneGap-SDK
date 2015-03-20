@@ -34,31 +34,36 @@ Quick Installation - Android
 	Depending on your setup and whether you are using Eclipse or Android Studio, the instructions will be slightly different however the library should work well with both. We have provided sample projects to get you started for both systems under the SampleProjects directory.
 
 2. Install Cordova through npm
-npm install -g cordova
+
+		npm install -g cordova
 
 3. Create the cordova project
 cordova create WW_Mip_Phonegap com.wowwee.mpip.phonegap MIP_PG
 
 4. add android platform
-cd WW_Mip_Phonegap
-cordova platform add android
+
+		cd WW_Mip_Phonegap
+		cordova platform add android
 
 5. add Mip Cordova plugin
-cordova plugin add
-../WW_BluetoothRobotControlLib_phonegap/com.wowwee.bluetoothrobotscontrol/
+
+		cordova plugin add
+		../WW_BluetoothRobotControlLib_phonegap/com.wowwee.bluetoothrobotscontrol/
 
 6. copy the example file
-rm -rf www
-mkdir www
-cp -rf plugins/com.wowwee.bluetoothrobotscontrol/example/www
+
+		rm -rf www
+		mkdir www
+		cp -rf plugins/com.wowwee.bluetoothrobotscontrol/example/www
 
 7.config the app for landscape
 add the line with widget on config.xml
-<perference name=“orientation” value=“landscape” />
+		<perference name=“orientation” value=“landscape” />
 
 8. build and run
-cordova build android
-cordova run android
+
+		cordova build android
+		cordova run android
 
 Notes about the SDK
 ---------------------------------
