@@ -43,12 +43,12 @@ Quick Installation - Android
 
 4. Add android platform
 
-		cd WW_Mip_Phonegap
+		cd MiP-PhoneGap-SDK/phonegap/WW_BluetoothRobotControlLib_phonegap
 		cordova platform add android
 
 5. Add Mip Cordova plugin
 
-		cordova plugin add ../WW_BluetoothRobotControlLib_phonegap/com.wowwee.bluetoothrobotscontrol/
+		 plugin add ../com.wowwee.bluetoothrobotscontrol/
 
 6. Copy the example file
 
@@ -83,15 +83,14 @@ Change directory and create the cordova project
 		cd MiP-PhoneGap-SDK/phonegap/WW_BluetoothRobotControlLib_phonegap
 		cordova create WW_Mip_Phonegap com.wowwee.mpip.phonegap MIP_PG
 
-Add android platform
+Add iOS platform
 
 		cd WW_Mip_Phonegap
 		cordova platform add ios
 
 Add Mip Cordova plugin
 
-		cordova plugin add
-		../com.wowwee.bluetoothrobotscontrol/
+		cordova plugin add ../com.wowwee.bluetoothrobotscontrol/
 
 Copy the example file
 
