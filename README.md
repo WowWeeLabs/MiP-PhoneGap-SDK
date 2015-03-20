@@ -48,8 +48,7 @@ Quick Installation - Android
 
 5. Add Mip Cordova plugin
 
-		cordova plugin add
-		../WW_BluetoothRobotControlLib_phonegap/com.wowwee.bluetoothrobotscontrol/
+		cordova plugin add ../WW_BluetoothRobotControlLib_phonegap/com.wowwee.bluetoothrobotscontrol/
 
 6. Copy the example file
 
