@@ -26,44 +26,54 @@ Table of Contents
 Quick Installation - Android
 ---------------------------------
 
-1. Clone the repository or [download the zip](https://github.com/WowWeeLabs/MiP-PhoneGap-SDK/archive/master.zip).
+Clone the repository or [download the zip](https://github.com/WowWeeLabs/MiP-PhoneGap-SDK/archive/master.zip).
 
 		git clone https://github.com/WowWeeLabs/MiP-PhoneGap-SDK.git
 
 	Depending on your setup and whether you are using Eclipse or Android Studio, the instructions will be slightly different however the library should work well with both. We have provided sample projects to get you started for both systems under the SampleProjects directory.
 
-2. Install Cordova through npm
+Install Cordova through npm
 
 		npm install -g cordova
 
-3. Create the cordova project
-
-
-	cordova create WW_Mip_Phonegap com.wowwee.mpip.phonegap MIP_PG
-
-4. Add android platform
+Create the cordova project
 
 		cd MiP-PhoneGap-SDK/phonegap/WW_BluetoothRobotControlLib_phonegap
-		cordova platform add android
+		cordova create WW_Mip_Phonegap com.wowwee.mpip.phonegap MIP_PG
 
-5. Add Mip Cordova plugin
+Add android platform
 
-		 plugin add ../com.wowwee.bluetoothrobotscontrol/
+		cd WW_Mip_Phonegap
+		cordova platform add android (see below solution if you find error)
 
-6. Copy the example file
+Add Mip Cordova plugin
+
+		cordova plugin add ../com.wowwee.bluetoothrobotscontrol/
+
+Copy the example file
 
 		rm -rf www
 		mkdir www
-		cp -rf plugins/com.wowwee.bluetoothrobotscontrol/example/www
+		cp -rf plugins/com.wowwee.bluetoothrobotscontrol/example/ www
 
-7. Config the app for landscape, add the line with widget on config.xml
+Config the app for landscape, add the line with widget on config.xml
 
 		<perference name=“orientation” value=“landscape” />
 
-8. Build and run
+Build and run
 
 		cordova build android
 		cordova run android
+
+Error:
+ANDROID_HOME is not set and "android" command not in your PATH. You must fulfill at least one of these conditions.
+
+Solutions:
+For MacOX:
+export ANDROID_HOME=/<installation location>/android-sdk-macosx export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+For windows 
+Right click on My computer -> properties -> Advanced system setting -> Environment Variables Edit Pathon system variables to ;/yourSdkHome/tools;/youSdkHome/platform-tools.
+
 
 Quick Installation - iOS
 ---------------------------------
