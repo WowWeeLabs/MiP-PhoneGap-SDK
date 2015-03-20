@@ -1,7 +1,7 @@
 WowWee MiP PhoneGap SDK
 ================================
 
-![](Images/MiP.png)
+![](images/MiP.png)
 
 The free MiP PhoneGap SDK lets you control your [WowWee MiP robot](http://www.meetmip.com) on iOS and Android devices with Bluetooth Low Energy chipsets. To use this SDK you will also need a physical MiP robot.
 
@@ -14,15 +14,12 @@ For information on WowWee products visit: <http://www.wowwee.com>
 Table of Contents
 ---------------------------------------
 
-- [Quick Installation]
-	- [Android](#quick-installation-android)
-	- [iOS](#quick-installation-ios)
+- [Quick Installation](#)
+	- [Android](#quick-installation---android)
+	- [iOS](#quick-installation---ios)
 - [Notes about the SDK](#notes-about-the-sdk)
-- [Using the SDK](#using-the-sdk)
-	- [Working with Multiple MiPs](#working-with-multiple-mips)
 - [License](#license)
 - [Contributing](#contributing)
-- [Credits](#credits)
 - [Projects using this SDK](#projects-using-this-sdk)
 
 
@@ -115,7 +112,7 @@ Quick Installation - iOS
 9. Open xCode projects "phonegap/WW_BluetoothRobotControlLib_phonegap/platforms/BRC_PG.xcodeproj
 10. Drag the framework "WowWeeMiPSDK.framework" to Embeded Binaries
 
-![](Images/dragiosframework.png)
+![](images/dragiosframework.png)
 
 Notes about the SDK
 ---------------------------------
