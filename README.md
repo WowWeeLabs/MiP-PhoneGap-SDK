@@ -69,55 +69,56 @@ Quick Installation - Android
 Quick Installation - iOS
 ---------------------------------
 
-1. Clone the repository or [download the zip](https://github.com/WowWeeLabs/MiP-PhoneGap-SDK/archive/master.zip).
+Clone the repository or [download the zip](https://github.com/WowWeeLabs/MiP-PhoneGap-SDK/archive/master.zip).
 
 		git clone https://github.com/WowWeeLabs/MiP-PhoneGap-SDK.git
 
 	Depending on your setup and whether you are using Eclipse or Android Studio, the instructions will be slightly different however the library should work well with both. We have provided sample projects to get you started for both systems under the SampleProjects directory.
 
-2. Install Cordova through npm
+Install Cordova through npm
 
 		npm install -g cordova
 
-3. Change directory and create the cordova project
+Change directory and create the cordova project
 
 		cd MiP-PhoneGap-SDK/phonegap/WW_BluetoothRobotControlLib_phonegap
 		cordova create WW_Mip_Phonegap com.wowwee.mpip.phonegap MIP_PG
 
-4. Add android platform
+Add android platform
 
 		cd WW_Mip_Phonegap
 		cordova platform add ios
 
-5. Add Mip Cordova plugin
+Add Mip Cordova plugin
 
 		cordova plugin add
 		../com.wowwee.bluetoothrobotscontrol/
 
-6. Copy the example file
+Copy the example file
 
 		rm -rf www
 		mkdir www
 		cp -rf plugins/com.wowwee.bluetoothrobotscontrol/example/ www
 
-7. Config the app for landscape, add the line with widget on config.xml
+Config the app for landscape, add the line with widget on config.xml
 
 		<perference name=“orientation” value=“landscape” />
 
-8. Open xCode projects "platforms/ios/MIP_PG.xcodeproj"
-9. Enable Modules (C and Objective C) in Build Settings
+Open xCode projects "platforms/ios/MIP_PG.xcodeproj"
+
+Enable Modules (C and Objective C) in Build Settings
 
 ![](images/enablemodules.png)
 
-10. Change Deployment Target to 8.0 in General
+Change Deployment Target to 8.0 in General
 
 ![](images/deploymenttarget.png)
 
-11. Drag the framework "WowWeeMiPSDK.framework" to Embeded Binaries
+Add the framework "WowWeeMiPSDK.framework" to Embeded Binaries
 
 ![](images/dragiosframework.png)
 
-12. Build and run
+Build and run
 
 		cordova build ios
 		cordova run ios
