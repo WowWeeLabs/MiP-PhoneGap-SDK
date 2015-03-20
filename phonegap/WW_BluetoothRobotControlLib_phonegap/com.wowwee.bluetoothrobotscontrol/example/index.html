@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, targetdensity-dpi=120dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.11.2.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <title>MiP Example</title>
+    </head>
+    <body>
+        <div class="app">
+            <div id="btnSearchMip">
+                <h1>Search & Connect Mip</h1>
+
+                <p id="hint" style="display:none">Searching</p>
+            </div>
+
+            <div id="pageConnectedMip">
+                <p id="mip_info">connect to xxxx</p>
+
+                <div id="btnPlaySound">
+                    <h1>Play Sound</h1>
+                </div>
+
+                <div id="btnChangeColor">
+                    <h1>Change Chest RGB to White</h1>
+                </div>
+
+                <div id="btnFalldown">
+                    <h1>Falldown</h1>
+                </div>
+
+                <div id="btnDrive">
+                    <h1>drive</h1>
+                </div>
+            </div>
+
+            <div id="pageDrive">
+                <div class="joystick_outer">
+                    <div class="joystick_single" id="joystick_single"></div>
+                </div>
+
+                <div class="joystick_outer" style="display:none">
+                    <div class="joystick_left" id="joystick_left"></div>
+                </div>
+
+                <div class="joystick_outer" style="display:none">
+                    <div class="joystick_right" id="joystick_right"></div>
+                </div>
+
+                <div id="btnBack">
+                    <h1>Back to main menu</h1>
+                </div>
+            </div>
+    </body>
+</html>

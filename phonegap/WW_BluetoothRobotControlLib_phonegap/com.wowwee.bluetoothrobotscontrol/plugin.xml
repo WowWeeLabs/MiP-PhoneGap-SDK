@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="com.wowwee.bluetoothrobotscontrol" version="0.0.1">
+    <engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+	<name>Bluetooth Robots Control Library</name>
+    
+    <js-module src="www/robotscontrol.js" name="RobotsControlPlugin">
+    	<clobbers target="window.robotscontrol" />
+	</js-module>
+    
+    <platform name="android">
+        <hook type="before_build" src="scripts/hook_android_before_build.sh" />
+        <config-file target="res/xml/config.xml" parent="/*">
+			<feature name="RobotsControlPlugin">
+				<param name="android-package" value="com.wowwee.bluetoothrobotscontrol.RobotsControlPlugin" />
+			</feature>
+		</config-file>
+		<source-file src="src/android/RobotsControlPlugin.java" target-dir="src/com/wowwee/bluetoothrobotscontrol" />
+        <source-file src="src/android/android-bluetooth-robot-control-library.jar" target-dir="libs/" />
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.BLUETOOTH"/>
+			<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+		</config-file>
+    </platform>
+    <platform name="ios">
+        <hook type="after_platform_add" src="scripts/hook_ios_after_platform_add.sh" />
+        <config-file target="config.xml" parent="/*">
+            <feature name="RobotsControlPlugin">
+                <param name="ios-package" value="RobotsControlPlugin" />
+            </feature>
+        </config-file>
+        <config-file target="*-Info.plist" parent="UIBackgroundModes">
+			<array>
+				<string>bluetooth-central</string>
+			</array>
+		</config-file>
+        <header-file src="src/ios/RobotsControlPlugin.h" />
+		<source-file src="src/ios/RobotsControlPlugin.m" />
+		<framework src="CoreBluetooth.framework" />
+        <framework src="src/ios/WowWeeMiPSDK.framework" custom="true"/>
+    </platform>
+</plugin>

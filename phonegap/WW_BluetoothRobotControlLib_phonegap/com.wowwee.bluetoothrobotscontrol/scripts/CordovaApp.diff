@@ -1,0 +1,48 @@
+diff --git a/CordovaApp.java b/platforms/android/src/com/wowwee/bluetoothrobotscontrol/phonegap/CordovaApp.java
+index 0a92417..1e69a24 100644
+--- a/CordovaApp.java
++++ b/CordovaApp.java
+@@ -20,10 +20,16 @@
+ package com.wowwee.bluetoothrobotscontrol.phonegap;
+ 
+ import android.os.Bundle;
++import android.util.DisplayMetrics;
++
+ import org.apache.cordova.*;
+ 
+ public class CordovaApp extends CordovaActivity
+ {
++	// declare the original size of the app
++	 protected float ORIG_APP_W = 640;
++	 protected float ORIG_APP_H = 960;
++
+     @Override
+     public void onCreate(Bundle savedInstanceState)
+     {
+@@ -31,5 +37,26 @@ public class CordovaApp extends CordovaActivity
+         super.init();
+         // Set by <content src="index.html" /> in config.xml
+         loadUrl(launchUrl);
++
++        // set some defaults
++        this.appView.setHorizontalScrollBarEnabled(false);
++        this.appView.setHorizontalScrollbarOverlay(false);
++        this.appView.setVerticalScrollBarEnabled(false);
++        this.appView.setVerticalScrollbarOverlay(false);
++
++        // get actual screen size
++        DisplayMetrics metrics = getResources().getDisplayMetrics();
++        int width = metrics.widthPixels;
++
++        // calculate target scale
++        double globalScale = Math.ceil( ( width / ORIG_APP_W ) * 100 );
++
++        // set some defaults on the web view
++        this.appView.getSettings().setBuiltInZoomControls( false );
++        this.appView.getSettings().setSupportZoom( false );
++        this.appView.getSettings().setGeolocationEnabled( true );
++
++        // set the scale
++        this.appView.setInitialScale( (int)globalScale );
+     }
+ }
