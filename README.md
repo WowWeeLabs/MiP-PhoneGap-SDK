@@ -92,27 +92,36 @@ Quick Installation - iOS
 5. Add Mip Cordova plugin
 
 		cordova plugin add
-		../WW_BluetoothRobotControlLib_phonegap/com.wowwee.bluetoothrobotscontrol/
+		../com.wowwee.bluetoothrobotscontrol/
 
 6. Copy the example file
 
 		rm -rf www
 		mkdir www
-		cp -rf plugins/com.wowwee.bluetoothrobotscontrol/example/www
+		cp -rf plugins/com.wowwee.bluetoothrobotscontrol/example/ www
 
 7. Config the app for landscape, add the line with widget on config.xml
 
 		<perference name=“orientation” value=“landscape” />
 
-8. Build and run
+8. Open xCode projects "platforms/ios/MIP_PG.xcodeproj"
+9. Enable Modules (C and Objective C) in Build Settings
+
+![](images/enablemodules.png)
+
+10. Change Deployment Target to 8.0 in General
+
+![](images/deploymenttarget.png)
+
+11. Drag the framework "WowWeeMiPSDK.framework" to Embeded Binaries
+
+![](images/dragiosframework.png)
+
+12. Build and run
 
 		cordova build ios
 		cordova run ios
 
-9. Open xCode projects "phonegap/WW_BluetoothRobotControlLib_phonegap/platforms/BRC_PG.xcodeproj"
-10. Drag the framework "WowWeeMiPSDK.framework" to Embeded Binaries
-
-![](images/dragiosframework.png)
 
 Notes about the SDK
 ---------------------------------
