@@ -1,26 +1,25 @@
 WowWee MiP PhoneGap SDK
 ================================
 
-![](Images/MiP.png)
+![](images/MiP.png)
 
-The free MiP PhoneGap SDK lets you control your [WowWee MiP robot](www.meetmip.com) on iOS and Android devices with Bluetooth Low Energy chipsets. To use this SDK you will also need a physical MiP robot.
+The free MiP PhoneGap SDK lets you control your [WowWee MiP robot](http://www.meetmip.com) on iOS and Android devices with Bluetooth Low Energy chipsets. To use this SDK you will also need a physical MiP robot.
 
 A list of devices we expect to be compatible is listed [on our website](http://www.wowwee.com/mip/compatibility).
 
-There is also an [iOS SDK](https://github.com/WowWeeLabs/MiP-iOS-SDK) and [Android SDK](https://github.com/WowWeeLabs/MiP-Android-SDK) version available.
+There is also an [Android SDK](https://github.com/WowWeeLabs/MiP-Android-SDK) and [iOS SDK](https://github.com/WowWeeLabs/MiP-iOS-SDK)  version available.
 
 For information on WowWee products visit: <http://www.wowwee.com>
 
 Table of Contents
 ---------------------------------------
 
-- [Quick Installation](#quick-installation)
+- [Quick Installation](#)
+	- [Android](#quick-installation---android)
+	- [iOS](#quick-installation---ios)
 - [Notes about the SDK](#notes-about-the-sdk)
-- [Using the SDK](#using-the-sdk)
-	- [Working with Multiple MiPs](#working-with-multiple-mips)
 - [License](#license)
 - [Contributing](#contributing)
-- [Credits](#credits)
 - [Projects using this SDK](#projects-using-this-sdk)
 
 
@@ -34,31 +33,86 @@ Quick Installation - Android
 	Depending on your setup and whether you are using Eclipse or Android Studio, the instructions will be slightly different however the library should work well with both. We have provided sample projects to get you started for both systems under the SampleProjects directory.
 
 2. Install Cordova through npm
-npm install -g cordova
+
+		npm install -g cordova
 
 3. Create the cordova project
-cordova create WW_Mip_Phonegap com.wowwee.mpip.phonegap MIP_PG
 
-4. add android platform
-cd WW_Mip_Phonegap
-cordova platform add android
 
-5. add Mip Cordova plugin
-cordova plugin add
-../WW_BluetoothRobotControlLib_phonegap/com.wowwee.bluetoothrobotscontrol/
+	cordova create WW_Mip_Phonegap com.wowwee.mpip.phonegap MIP_PG
 
-6. copy the example file
-rm -rf www
-mkdir www
-cp -rf plugins/com.wowwee.bluetoothrobotscontrol/example/www
+4. Add android platform
 
-7.config the app for landscape
-add the line with widget on config.xml
-<perference name=“orientation” value=“landscape” />
+		cd WW_Mip_Phonegap
+		cordova platform add android
 
-8. build and run
-cordova build android
-cordova run android
+5. Add Mip Cordova plugin
+
+		cordova plugin add
+		../WW_BluetoothRobotControlLib_phonegap/com.wowwee.bluetoothrobotscontrol/
+
+6. Copy the example file
+
+		rm -rf www
+		mkdir www
+		cp -rf plugins/com.wowwee.bluetoothrobotscontrol/example/www
+
+7. Config the app for landscape, add the line with widget on config.xml
+
+		<perference name=“orientation” value=“landscape” />
+
+8. Build and run
+
+		cordova build android
+		cordova run android
+
+Quick Installation - iOS
+---------------------------------
+
+1. Clone the repository or [download the zip](https://github.com/WowWeeLabs/MiP-PhoneGap-SDK/archive/master.zip).
+
+		git clone https://github.com/WowWeeLabs/MiP-PhoneGap-SDK.git
+
+	Depending on your setup and whether you are using Eclipse or Android Studio, the instructions will be slightly different however the library should work well with both. We have provided sample projects to get you started for both systems under the SampleProjects directory.
+
+2. Install Cordova through npm
+
+		npm install -g cordova
+
+3. Create the cordova project
+
+
+	cordova create WW_Mip_Phonegap com.wowwee.mpip.phonegap MIP_PG
+
+4. Add android platform
+
+		cd WW_Mip_Phonegap
+		cordova platform add ios
+
+5. Add Mip Cordova plugin
+
+		cordova plugin add
+		../WW_BluetoothRobotControlLib_phonegap/com.wowwee.bluetoothrobotscontrol/
+
+6. Copy the example file
+
+		rm -rf www
+		mkdir www
+		cp -rf plugins/com.wowwee.bluetoothrobotscontrol/example/www
+
+7. Config the app for landscape, add the line with widget on config.xml
+
+		<perference name=“orientation” value=“landscape” />
+
+8. Build and run
+
+		cordova build ios
+		cordova run ios
+
+9. Open xCode projects "phonegap/WW_BluetoothRobotControlLib_phonegap/platforms/BRC_PG.xcodeproj
+10. Drag the framework "WowWeeMiPSDK.framework" to Embeded Binaries
+
+![](images/dragiosframework.png)
 
 Notes about the SDK
 ---------------------------------
