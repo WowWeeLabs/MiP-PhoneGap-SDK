@@ -79,10 +79,10 @@ Quick Installation - iOS
 
 		npm install -g cordova
 
-3. Create the cordova project
+3. Change directory and create the cordova project
 
-
-	cordova create WW_Mip_Phonegap com.wowwee.mpip.phonegap MIP_PG
+		cd MiP-PhoneGap-SDK/phonegap/WW_BluetoothRobotControlLib_phonegap
+		cordova create WW_Mip_Phonegap com.wowwee.mpip.phonegap MIP_PG
 
 4. Add android platform
 
@@ -109,7 +109,7 @@ Quick Installation - iOS
 		cordova build ios
 		cordova run ios
 
-9. Open xCode projects "phonegap/WW_BluetoothRobotControlLib_phonegap/platforms/BRC_PG.xcodeproj
+9. Open xCode projects "phonegap/WW_BluetoothRobotControlLib_phonegap/platforms/BRC_PG.xcodeproj"
 10. Drag the framework "WowWeeMiPSDK.framework" to Embeded Binaries
 
 ![](images/dragiosframework.png)
