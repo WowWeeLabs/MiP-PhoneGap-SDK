@@ -71,7 +71,7 @@ ANDROID_HOME is not set and "android" command not in your PATH. You must fulfill
 Solutions:
 For MacOX:
 export ANDROID_HOME=/<installation location>/android-sdk-macosx export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-For windows 
+For windows
 Right click on My computer -> properties -> Advanced system setting -> Environment Variables Edit Pathon system variables to ;/yourSdkHome/tools;/youSdkHome/platform-tools.
 
 
