@@ -30,7 +30,7 @@ Clone the repository or [download the zip](https://github.com/WowWeeLabs/MiP-Pho
 
 		git clone https://github.com/WowWeeLabs/MiP-PhoneGap-SDK.git
 
-	Depending on your setup and whether you are using Eclipse or Android Studio, the instructions will be slightly different however the library should work well with both. We have provided sample projects to get you started for both systems under the SampleProjects directory.
+Depending on your setup and whether you are using Eclipse or Android Studio, the instructions will be slightly different however the library should work well with both. We have provided sample projects to get you started for both systems under the SampleProjects directory.
 
 Install Cordova through npm
 
@@ -82,7 +82,7 @@ Clone the repository or [download the zip](https://github.com/WowWeeLabs/MiP-Pho
 
 		git clone https://github.com/WowWeeLabs/MiP-PhoneGap-SDK.git
 
-	Depending on your setup and whether you are using Eclipse or Android Studio, the instructions will be slightly different however the library should work well with both. We have provided sample projects to get you started for both systems under the SampleProjects directory.
+Depending on your setup and whether you are using Eclipse or Android Studio, the instructions will be slightly different however the library should work well with both. We have provided sample projects to get you started for both systems under the SampleProjects directory.
 
 Install Cordova through npm
 
