@@ -5,9 +5,7 @@ WowWee MiP PhoneGap SDK
 
 The free MiP PhoneGap SDK lets you control your [WowWee MiP robot](http://www.meetmip.com) on iOS and Android devices with Bluetooth Low Energy chipsets. To use this SDK you will also need a physical MiP robot.
 
-A list of devices we expect to be compatible is listed [on our website](http://www.wowwee.com/mip/compatibility).
-
-There is also an [Android SDK](https://github.com/WowWeeLabs/MiP-Android-SDK) and [iOS SDK](https://github.com/WowWeeLabs/MiP-iOS-SDK)  version available.
+Pre-built official SDKs are also available for [iOS](https://github.com/WowWeeLabs/MiP-iOS-SDK), [Android SDK](https://github.com/WowWeeLabs/MiP-Android-SDK), [Windows](https://github.com/WowWeeLabs/MiP-Windows-SDK.git) and [JavaScript (Node.js)](https://github.com/WowWeeLabs/MiP-Node.js-SDK.git).
 
 For information on WowWee products visit: <http://www.wowwee.com>
 
